@@ -101,4 +101,4 @@ def third_level(check, x, y) -> str:
     :return: String to make some events
     """
     #TODO
-    return "Something LOL"
+    return "Something lol"
