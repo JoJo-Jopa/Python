@@ -1,42 +1,42 @@
 ﻿import random
 import random_bot
 
-def go_down():
+def go_down() -> str:
     """
     Returns string to move player down
     :return: String to move player down
     """
     return "down"
 
-def go_up():
+def go_up() -> str:
     """
     Returns string to move player up
     :return: String to move player up
     """
     return "up"
 
-def go_right():
+def go_right() -> str:
     """
     Returns string to move player to the right
     :return: String to move player to the right
     """
     return "right"
 
-def go_left():
+def go_left() -> str:
     """
     Returns string to move player to the left
     :return: String to move player to the left
     """
     return "left"
 
-def take_gold():
+def take_gold() -> str:
     """
     Returns string to take gold
     :return: String to take gold
     """
     return "take"
 
-def script(check, x, y):
+def script(check, x, y) -> str:
     """
     Executes in loop
     :param check: Function to check position of the game objects
@@ -52,7 +52,7 @@ def script(check, x, y):
         return third_level(check, x, y)
     return "pass"
 
-def first_level(check, x, y):
+def first_level(check, x, y) -> str:
     """
     Called when first level is started
     :param check: Function to check position of the game objects
@@ -67,7 +67,7 @@ def first_level(check, x, y):
     else:
         return go_right()
 
-def second_level(check, x, y):
+def second_level(check, x, y) -> str:
     """
     Called when second level is started
     :param check: Function to check position of the game objects
@@ -87,12 +87,12 @@ def second_level(check, x, y):
         return go_down()
     if check("gold", x + 1, y):
         return go_right()
-    # Moving player by gold end
+    #Moving player by gold end
 
     if not check("wall", x + 2, y):
         return go_right()
 
-def third_level(check, x, y):
+def third_level(check, x, y) -> str:
     """
     Called when third level is started
     :param check: Function to check position of the game objects
