@@ -33,7 +33,7 @@ def task12(x):
         print(f"{condition_function4(x):.2e}")
 
 
-def condition_function1(x):
+def condition_function1(x) -> float:
     """
     Returns result of mathematical operations with one parameter
     :param x: Parameter with which to operate
@@ -42,7 +42,7 @@ def condition_function1(x):
     return math.pow(math.e, math.cos(x)) - math.pow(x, 8) + 67
 
 
-def condition_function2(x):
+def condition_function2(x) -> float:
     """
     Returns result of mathematical operations with one parameter
     :param x: Parameter with which to operate
@@ -51,7 +51,7 @@ def condition_function2(x):
     return math.pow(x, 7) + math.pow(x, 5)
 
 
-def condition_function3(x):
+def condition_function3(x) -> float:
     """
     Returns result of mathematical operations with one parameter
     :param x: Parameter with which to operate
@@ -60,7 +60,7 @@ def condition_function3(x):
     return math.pow(x, 6) + (math.pow(x, 5) / 19) + 3
 
 
-def condition_function4(x):
+def condition_function4(x) -> float:
     """
     Returns result of mathematical operations with one parameter
     :param x: Parameter with which to operate
@@ -80,7 +80,7 @@ def task13(n, m):
     print(f"{53 * math_sum1(1, 1, n, m) + math_sum2(1, 1, n, m):.2e}")
 
 
-def math_sum1(i, j, n, m):
+def math_sum1(i, j, n, m) -> float:
     """
     Returns result of double mathematical sum
     :param i: lower bound of first mathematical sum
@@ -96,7 +96,7 @@ def math_sum1(i, j, n, m):
     return result
 
 
-def math_sum2(i, j, n, m):
+def math_sum2(i, j, n, m) -> float:
     """
     Returns result of double mathematical sum
     :param i: lower bound of first mathematical sum
@@ -114,7 +114,7 @@ def math_sum2(i, j, n, m):
 #######################################################################
 
 
-def task14(n):
+def task14(n) -> float:
     """
     Implements recurrent function with one parameter and prints result
     :param n: Recurrent function parameter
