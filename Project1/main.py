@@ -1,11 +1,20 @@
 import math
 
 
-def task11(x, y):
+def print_eps(result):
     """
-    Calculates and prints result of mathematical operations with two parameters
+    Prints value of parameter using epsilon format
+    :param result: Value to print
+    """
+    print(f"{result:.2e}")
+
+
+def task11(x, y) -> float:
+    """
+    Calculates and returns result of mathematical operations with two parameters
     :param x: First parameter
     :param y: Second parameter
+    :return Result of mathematical operations with two parameters
     """
     a = math.e - math.cos(x) + 69
     b = math.cos(x) + math.pow(x, 7)
@@ -13,24 +22,25 @@ def task11(x, y):
     d = 87 * math.pow(x, 7) + math.pow(math.e, y)
     e = math.pow(x, 7) - (math.pow(y, 5) / 11)
     result = math.sqrt(a / b) + c + (d / e)
-    print(f"{result:.2e}")
+    return result
 
 #####################################################################
 
 
-def task12(x):
+def task12(x) -> float:
     """
-    Calculates result of mathematical operations with one parameter depending on the specific conditions
+    Calculates and returns result of mathematical operations with one parameter depending on the specific conditions
     :param x: Parameter with which to operate
+    :return Result of mathematical operations with one parameter
     """
     if x < 38:
-        print(f"{condition_function1(x):.2e}")
+        return condition_function1(x)
     if (x >= 38) and (x < 103):
-        print(f"{condition_function2(x):.2e}")
+        return condition_function2(x)
     if (x >= 103) and (x < 164):
-        print(f"{condition_function3(x):.2e}")
+        return condition_function3(x)
     if x >= 164:
-        print(f"{condition_function4(x):.2e}")
+        return condition_function4(x)
 
 
 def condition_function1(x) -> float:
@@ -71,13 +81,14 @@ def condition_function4(x) -> float:
 ####################################################################
 
 
-def task13(n, m):
+def task13(n, m) -> float:
     """
     Implements iteration function with two parameters and prints result
     :param n: First parameter
     :param m: Second parameter
+    :return Result of mathematical operations with two mathematical sums
     """
-    print(f"{53 * math_sum1(1, 1, n, m) + math_sum2(1, 1, n, m):.2e}")
+    return 53 * math_sum1(1, 1, n, m) + math_sum2(1, 1, n, m)
 
 
 def math_sum1(i, j, n, m) -> float:
