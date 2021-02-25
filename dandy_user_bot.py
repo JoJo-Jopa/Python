@@ -92,6 +92,7 @@ def second_level(check, x, y) -> str:
     if not check("wall", x + 2, y):
         return go_right()
 
+
 def third_level(check, x, y) -> str:
     """
     Called when third level is started
@@ -100,5 +101,14 @@ def third_level(check, x, y) -> str:
     :param y: Y coordinate
     :return: String to make some events
     """
-    #TODO
-    return "Something lol"
+    if check("gold", x, y):
+     return take_gold()
+
+    if check('wall', x - 1, y) and not check('wall', x + 1, y) and not check('wall', x, y - 1) or (not check('wall', x + 1, y) and not check('wall', x - 1, y) and not check('wall', x, y - 1) and not check('wall', x, y + 1) and check('wall', x - 1, y - 1)):
+        return go_up()
+    if not check('wall', x - 1, y) and check('wall', x + 1, y) and not check('wall', x, y + 1) or (not check('wall', x + 1, y) and not check('wall', x - 1, y) and not check('wall', x, y - 1) and not check('wall', x, y + 1) and check('wall', x + 1, y + 1)):
+        return go_down()
+    if check('wall', x, y - 1) or (not check('wall', x + 1, y) and not check('wall', x - 1, y) and not check('wall', x, y - 1) and not check('wall', x, y + 1) and check('wall', x + 1, y - 1)):
+        return go_right()
+    if check('wall', x, y + 1) or (not check('wall', x + 1, y) and not check('wall', x - 1, y) and not check('wall', x, y - 1) and not check('wall', x, y + 1) and check('wall', x - 1, y + 1)):
+        return go_left()
