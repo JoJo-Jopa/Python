@@ -1,6 +1,6 @@
 """
 This module contains ready-made functions to move player to the left, right, up and down
-and also function to attach player to the wall.....
+and also function to attach player to the wall.
 """
 
 def go_down() -> str:
