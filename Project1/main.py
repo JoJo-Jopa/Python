@@ -83,7 +83,7 @@ def condition_function4(x) -> float:
 
 def task13(n, m) -> float:
     """
-    Implements iteration function with two parameters and prints result
+    Implements iteration function with two parameters and returns result
     :param n: First parameter
     :param m: Second parameter
     :return Result of mathematical operations with two mathematical sums
@@ -127,7 +127,7 @@ def math_sum2(i, j, n, m) -> float:
 
 def task14(n) -> float:
     """
-    Implements recurrent function with one parameter and prints result
+    Implements recurrent function with one parameter and returns result
     :param n: Recurrent function parameter
     :return: Result of recurrent function with one parameter
     """
