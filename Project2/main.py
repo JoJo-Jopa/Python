@@ -115,10 +115,29 @@ def sep_first_column(sep_symbol, input_list=[]) -> list:
     # Converts tuple to the list
     t_list = [list(x) for x in new_list]
 
-    for i in range(len(t_list)):
-        t_list[i][1] = second_column_cell[i]
+    for x in range(len(t_list)):
+        t_list[x][1] = second_column_cell[x]
 
     return t_list
+
+
+def transform_cells(input_list=[]) -> list:
+    """
+    Returns list with transformed cells
+    :param input_list: list that will be transformed
+    :return: List with transformed cells
+    """
+    for x in range(len(input_list)):
+        input_list[x][1] = str(round(float(input_list[x][1]), 1))
+
+        if input_list[x][2] == 'да':
+            input_list[x][2] = 'true'
+        elif input_list[x][2] == 'нет':
+            input_list[x][2] = 'false'
+
+        input_list[x][0] = input_list[x][0].replace(' ', '-')
+        input_list[x][3] = input_list[x][3].replace('[at]', '@')
+    return input_list
 
 
 def task23(input_list=[]) -> list:
@@ -128,15 +147,16 @@ def task23(input_list=[]) -> list:
     :param input_list: input list to transform
     :return: Transformed list of lists
     """
-    return sep_first_column(';', remove_duplicate(input_list))
+    return transform_cells(sep_first_column(';', remove_duplicate(input_list)))
+
+# Testing task23 function
+#initial_list = [['0.46;498 927‐2483', 'нет', 'zusulov68[at]mail.ru'],
+                #['0.71;741 699‐2740', 'нет', 'secobin34[at]rambler.ru'],
+                #['0.36;363 760‐3794', 'да', 'binan97[at]yahoo.com'],
+                #['0.36;363 760‐3794', 'да', 'binan97[at]yahoo.com'],
+                #['0.16;100 776‐2316', 'да', 'gozman24[at]mail.ru'],
+                #['0.36;363 760‐3794', 'да', 'binan97[at]yahoo.com']]
 
 
-initial_list = [['0.09;243 254-4945', 'да', 'cebberg28[at]rambler.ru'],
-                ['0.33;513 481-8585', 'нет', 'zukelak65[at]rambler.ru'],
-                ['0.44;665 378-0965', 'да', 'vovuvev46[at]mail.ru'],
-                ['0.44;665 378-0965', 'да', 'vovuvev46[at]mail.ru'],
-                ['0.44;665 378-0965', 'да', 'vovuvev46[at]mail.ru']]
-
-
-for i in task23(initial_list):
-    print(i)
+#for i in task23(initial_list):
+    #print(i)
