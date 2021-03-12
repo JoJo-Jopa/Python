@@ -97,7 +97,7 @@ def sep_first_column(sep_symbol, input_list=[]) -> list:
     """
     Return list with first separated column by specified symbol
     :param sep_symbol: specified symbol to use in separating
-    :param input_list: list in that function will separate first column
+    :param input_list: list in which function will separate first column
     :return: List with first separated column
     """
     counter_of_sublist = 0
