@@ -61,11 +61,11 @@ def task21(input_list=[]) -> int:
 #################################################################################
 
 
-def task22(number) -> str:
+def task22(number) -> int:
     """
-    Returns transcoded hexadecimal string, this function uses bitwise operators to transcode given value
+    Returns transcoded decimal number, this function uses bitwise operators to transcode given value
     :param number: hexadecimal number to transcode
-    :return: Transcoded hexadecimal string
+    :return: Transcoded decimal number
     """
     a = number & 0b00000000000000000111111111111111
     b = number & 0b00111111111111111000000000000000
@@ -74,7 +74,7 @@ def task22(number) -> str:
     b = b >> 13
     c = c >> 30
 
-    return hex(a | b | c)
+    return a | b | c
 
 #################################################################################
 
