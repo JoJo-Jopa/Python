@@ -16,10 +16,10 @@ def task11(x, y) -> float:
     :param y: Second parameter
     :return Result of mathematical operations with two parameters
     """
-    a = math.e - math.cos(x) + 69
+    a = math.pow(math.e, y) - math.cos(x) + 69
     b = math.cos(x) + math.pow(x, 7)
     c = math.tan(y) - (math.pow(y, 6) / 37)
-    d = 87 * math.pow(x, 7) + math.pow(math.e, y)
+    d = (87 * math.pow(x, 8)) + math.pow(math.e, y)
     e = math.pow(x, 7) - (math.pow(y, 5) / 11)
     result = math.sqrt(a / b) + c + (d / e)
     return result
