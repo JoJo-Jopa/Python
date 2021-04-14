@@ -1,4 +1,6 @@
 class C32:  # Implements final Mele's automaton
+    state = None
+
     # Initializes fields of class
     def __init__(self):
         self.state = 'A'
