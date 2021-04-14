@@ -1,5 +1,5 @@
 class C32:  # Implements final Mele's automaton
-    state = None
+    state = 'SimpleState'
 
     # Initializes fields of class
     def __init__(self):
