@@ -7,7 +7,7 @@ class C32:  # Implements final Mele's automaton
         """
         Returns integer value and sets new character to field 'state'
         :exception RuntimeError
-        :return Integer value:
+        :return: Integer value
         """
         if self.state == 'A':
             self.state = 'A'
@@ -25,7 +25,7 @@ class C32:  # Implements final Mele's automaton
         """
         Returns integer value and sets new character to field 'state'
         :exception RuntimeError
-        :return Integer value:
+        :return: Integer value
         """
         if self.state == 'A':
             self.state = 'B'
@@ -49,7 +49,7 @@ class C32:  # Implements final Mele's automaton
         """
         Returns integer value and sets new character to field 'state'
         :exception RuntimeError
-        :return Integer value:
+        :return: Integer value
         """
         if self.state == 'B':
             self.state = 'D'
